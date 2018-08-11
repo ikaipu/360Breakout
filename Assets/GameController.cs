@@ -47,7 +47,6 @@ public class GameController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		Debug.Log("ara sia ay" +  sphereInstances.Count);
     if(isGameOver && Input.anyKeyDown){
 
 			for(int i = 0; i <  sphereInstances.Count; i++)
@@ -66,7 +65,7 @@ public class GameController : MonoBehaviour {
 	}
 
 	public void subtractHp(bool isGameOver){
-		int hp = this.hp - 100;
+		int hp = this.hp - 3;
 		if(hp <= 0) {
 			this.isGameOver = isGameOver;
 		} else {
