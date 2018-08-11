@@ -11,8 +11,15 @@ public class Shield : MonoBehaviour {
     }
  
     // Update is called once per frame
-    void Update () {
-        transform.position = InputTracking.GetLocalPosition(XRNode.RightHand) * 15 + GameObject.Find("Main Camera").transform.position + new Vector3(0f, 2f, 0);  
-        transform.eulerAngles = InputTracking.GetLocalRotation(XRNode.RightHand).eulerAngles;
+    void Update ()
+    {
+        var basePosition = GameObject.Find("Main Camera").transform.position + new Vector3(1f, 3f, 3f);
+        var transformPosition = InputTracking.GetLocalPosition(XRNode.RightHand) * 15 + basePosition;
+        var transformEulerAngles = InputTracking.GetLocalRotation(XRNode.RightHand).eulerAngles;
+       
+        transform.position = transformPosition;    
+        transform.eulerAngles = transformEulerAngles;
+        transform.RotateAround(basePosition, Vector3.up, 90);
+        
     }
 }
