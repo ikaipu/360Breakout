@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class TestAudioScript : MonoBehaviour {
 
-	// Use this for initialization
-	public AudioSource source;
-	public AudioClip clip;
-	void Start () {
-    source = GetComponent<AudioSource>();
-		if(null == source)
-			Debug.Log("wala");
-		else
-			Debug.Log("naa");
-    source.Play(44100);
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	[SerializeField] AudioClip _audioClip;
+    [SerializeField] [Range(0.0f, 1.0f)] float _volume = 1;
+    AudioSource _audioSource;
+ 
+    void Awake ()
+    {
+        _audioSource = gameObject.AddComponent<AudioSource> ();
+        if (_audioClip != null)
+            _audioSource.clip = _audioClip;
+        _audioSource.playOnAwake = false;
+        _audioSource.volume = _volume;
+        _audioSource.Play();
+
+				
+				// PlayerPrefs.SetString("testname","testvalue");
+				// PlayerPrefs.Save();
+				Debug.Log("Arang player pref " + PlayerPrefs.GetInt("highScore"));
+    }
+
 }

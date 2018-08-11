@@ -36,11 +36,27 @@ public class GameController : MonoBehaviour {
 						yield return new WaitForSeconds(1.0f);
 						timer++;
 				}
+
 				
 				timerText.text = "GAME OVER";
 				hpText.text = "Press any key to restart";
+
+
+				int currentHighScore = PlayerPrefs.GetInt("highScore");
+
+				if(timer > currentHighScore) {
+
+					image.enabled=true;
+					PlayerPrefs.SetInt("highScore",(int) timer);
+					PlayerPrefs.Save();
+
+					timerText.text = "NEW HIGH SCORE!!!";
+				}
 		}
 	void Start () {
+		//use this to reset high score
+		// PlayerPrefs.SetInt("highScore",0);
+
 		resetGame();
   }
 	
