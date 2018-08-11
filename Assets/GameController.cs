@@ -37,7 +37,10 @@ public class GameController : MonoBehaviour {
 						timer++;
 				}
 
-				
+				for(int i = 0; i <  sphereInstances.Count; i++) {
+					Destroy(sphereInstances[i]);
+				}
+				sphereInstances.Clear();
 				timerText.text = "GAME OVER";
 				hpText.text = "Press any key to restart";
 
