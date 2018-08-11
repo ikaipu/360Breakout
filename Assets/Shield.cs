@@ -4,6 +4,7 @@
  using UnityEngine.XR;
  
  public class Shield : MonoBehaviour {
+	public GameObject gameController;
  
      // Use this for initialization
      void Start () {

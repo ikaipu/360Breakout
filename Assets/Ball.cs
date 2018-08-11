@@ -8,12 +8,17 @@ public class Ball : MonoBehaviour {
 	// Use this for initialization
 	Rigidbody rb;
 
+
+AudioSource src;
 	void Start () {
 
-		rb=GetComponent<Rigidbody>();
+    rb=GetComponent<Rigidbody>();
+		// audioSource.pla;
+		// audioData.GetComponent<AudioSource>().Play();
 		// rb.isKinematic = false;
 		// rb.AddForce(new Vector3(0,50f,-50f));
 		rb.AddForce(new Vector3(-50f,0,0));
+
 
 		
 	}
@@ -23,7 +28,6 @@ public class Ball : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		Debug.Log("naai nibanda");
 		// rb.isKinematic = false;
 		// rb.AddForce(new Vector3(0,50f,-50f));
 	}

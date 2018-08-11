@@ -9,6 +9,8 @@ public class GameController : MonoBehaviour {
 	public Text timerText;
 	public Text hpText;
 
+	public RawImage image;
+
 	 List<GameObject> sphereInstances = new List<GameObject>();
     float timer = 0f;
 	private bool isGameOver = false;
@@ -39,33 +41,32 @@ public class GameController : MonoBehaviour {
 				hpText.text = "Press any key to restart";
 		}
 	void Start () {
-
-		hpText.text = "HP: " + hp;
-		StartCoroutine(StartCountdown());
-
+		resetGame();
   }
 	
 	// Update is called once per frame
 	void Update () {
     if(isGameOver && Input.anyKeyDown){
-
-			for(int i = 0; i <  sphereInstances.Count; i++)
-     {
-         Destroy(sphereInstances[i]);
-     }
-     sphereInstances.Clear();
-			isGameOver = false;
-			hp = 100;
-			timer = 0f;
-
-
-			hpText.text = "HP: " + hp;
-			StartCoroutine(StartCountdown());
+			resetGame();
     }
 	}
 
+	void resetGame(){
+
+		image.enabled=false;
+		for(int i = 0; i <  sphereInstances.Count; i++) {
+      Destroy(sphereInstances[i]);
+    }
+    sphereInstances.Clear();
+		isGameOver = false;
+		hp = 100;
+		timer = 0f;
+
+		hpText.text = "HP: " + hp;
+		StartCoroutine(StartCountdown());
+	}
 	public void subtractHp(bool isGameOver){
-		int hp = this.hp - 3;
+		int hp = this.hp - 100;
 		if(hp <= 0) {
 			this.isGameOver = isGameOver;
 		} else {
