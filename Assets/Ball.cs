@@ -11,8 +11,9 @@ public class Ball : MonoBehaviour {
 	void Start () {
 
 		rb=GetComponent<Rigidbody>();
-		rb.isKinematic = false;
-		rb.AddForce(new Vector3(0,50f,-50f));
+		// rb.isKinematic = false;
+		// rb.AddForce(new Vector3(0,50f,-50f));
+		rb.AddForce(new Vector3(0,50f,-100f));
 
 		
 	}
@@ -22,6 +23,9 @@ public class Ball : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
+		Debug.Log("naai nibanda");
+		// rb.isKinematic = false;
+		// rb.AddForce(new Vector3(0,50f,-50f));
 	}
 	
 }

@@ -19,7 +19,13 @@ public class GameController : MonoBehaviour {
 				{
 						if(timer % 5 == 0) {
 
-							Instantiate(Sphere, new Vector3(Sphere.transform.position.x,Sphere.transform.position.y,Sphere.transform.position.z), Quaternion.identity);
+							// float x = Sphere.transform.position.x;
+							// float y = Sphere.transform.position.y;
+							// float z = Sphere.transform.position.z;
+							float x = Random.Range(Sphere.transform.position.x, Sphere.transform.position.x +5.0f);
+							float y = Random.Range(Sphere.transform.position.y, Sphere.transform.position.y + 5.0f);
+							float z = Random.Range(Sphere.transform.position.z, Sphere.transform.position.z + 5.0f);
+							Instantiate(Sphere, new Vector3(x,y,z), Quaternion.identity);
 						}
 						text.text = "Countdown: " + timer;
 						yield return new WaitForSeconds(1.0f);
