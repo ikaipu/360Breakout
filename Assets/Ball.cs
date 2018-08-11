@@ -5,31 +5,27 @@ using UnityEngine.UI;
 
 public class Ball : MonoBehaviour {
 
-	// Use this for initialization
-	Rigidbody rb;
+    // Use this for initialization
+    Rigidbody rb;
 
+    void Start () {
 
-AudioSource src;
-	void Start () {
-
-    rb=GetComponent<Rigidbody>();
-		// audioSource.pla;
-		// audioData.GetComponent<AudioSource>().Play();
-		// rb.isKinematic = false;
-		// rb.AddForce(new Vector3(0,50f,-50f));
-		rb.AddForce(new Vector3(-50f,0,0));
-
+        rb=GetComponent<Rigidbody>();
+        float x = Random.Range(50f, 500f);
+        float z = Random.Range(-100f, 100f);
+        rb.AddForce(new Vector3(x,0,z));
 
 		
-	}
+    }
 	
-	// Update is called once per frame
-	void Update () {
-	}
+    // Update is called once per frame
+    void Update () {
+    }
 
-	void OnCollisionEnter(Collision col){
-		// rb.isKinematic = false;
-		// rb.AddForce(new Vector3(0,50f,-50f));
-	}
+    void OnCollisionEnter(Collision col){
+        Debug.Log("naai nibanda");
+        // rb.isKinematic = false;
+        // rb.AddForce(new Vector3(0,50f,-50f));
+    }
 	
 }
