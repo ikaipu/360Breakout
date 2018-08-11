@@ -13,7 +13,7 @@ public class Ball : MonoBehaviour {
 		rb=GetComponent<Rigidbody>();
 		// rb.isKinematic = false;
 		// rb.AddForce(new Vector3(0,50f,-50f));
-		rb.AddForce(new Vector3(0,50f,-100f));
+		rb.AddForce(new Vector3(-50f,0,0));
 
 		
 	}
