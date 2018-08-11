@@ -26,7 +26,7 @@ public class Ball : MonoBehaviour {
         Debug.Log("naai nibanda");
 				GetComponent<AudioSource>().Play();
         // rb.isKinematic = false;
-        // rb.AddForce(new Vector3(0,50f,-50f));
+        rb.AddForce(new Vector3(100f,100f,-100f));
     }
 	
 }
