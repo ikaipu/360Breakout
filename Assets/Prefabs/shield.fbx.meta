@@ -1,27 +1,42 @@
 fileFormatVersion: 2
-guid: a3da99e6a273b4d71932f256e994f1c7
+guid: 751e5e688a3b14615b3d7306019e97da
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: //RootNode
-    100002: pCube11
-    100004: pCube12
-    400000: //RootNode
-    400002: pCube11
-    400004: pCube12
+    100000: a_polySurface4
+    100002: b_polySurface21
+    100004: c_polySurface23
+    100006: e_polySurface2
+    100008: pSphere1
+    100010: //RootNode
+    400000: a_polySurface4
+    400002: b_polySurface21
+    400004: c_polySurface23
+    400006: e_polySurface2
+    400008: pSphere1
+    400010: //RootNode
     2100000: lambert1
-    2300000: pCube11
-    2300002: pCube12
-    3300000: pCube11
-    3300002: pCube12
-    4300000: pCube12
-    4300002: pCube11
+    2300000: a_polySurface4
+    2300002: b_polySurface21
+    2300004: c_polySurface23
+    2300006: e_polySurface2
+    2300008: pSphere1
+    3300000: a_polySurface4
+    3300002: b_polySurface21
+    3300004: c_polySurface23
+    3300006: e_polySurface2
+    3300008: pSphere1
+    4300000: pSphere1
+    4300002: e_polySurface2
+    4300004: a_polySurface4
+    4300006: c_polySurface23
+    4300008: b_polySurface21
   externalObjects: {}
   materials:
     importMaterials: 1
-    materialName: 0
+    materialName: 2
     materialSearch: 1
-    materialLocation: 1
+    materialLocation: 0
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
@@ -47,7 +62,7 @@ ModelImporter:
     isReadable: 1
   meshes:
     lODScreenPercentages: []
-    globalScale: 2
+    globalScale: 4
     meshCompression: 0
     addColliders: 0
     importVisibility: 1

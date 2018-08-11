@@ -15,6 +15,6 @@ public class Human : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		gameController.GetComponent<GameController>().setGameOver(true);
+		gameController.GetComponent<GameController>().subtractHp(true);
 	}
 }

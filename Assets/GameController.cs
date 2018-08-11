@@ -6,11 +6,14 @@ using UnityEngine.UI;
 public class GameController : MonoBehaviour {
 
 	// Use this for initialization
-	public Text text;
+	public Text timerText;
+	public Text hpText;
 
 	private GameObject instanceOfBall;
     float timer = 0f;
 	private bool isGameOver = false;
+
+	private int hp = 100;
 
 	public GameObject Sphere;
 		public IEnumerator StartCountdown(float countdownValue = 0)
@@ -27,14 +30,16 @@ public class GameController : MonoBehaviour {
 							float z = Random.Range(Sphere.transform.position.z, Sphere.transform.position.z + 5.0f);
 							Instantiate(Sphere, new Vector3(x,y,z), Quaternion.identity);
 						}
-						text.text = "Countdown: " + timer;
+						timerText.text = "Counter: " + timer;
 						yield return new WaitForSeconds(1.0f);
 						timer++;
 				}
 				
-				text.text = "GAME OVER";
+				timerText.text = "GAME OVER";
 		}
 	void Start () {
+
+		hpText.text = "HP: " + hp;
 		StartCoroutine(StartCountdown());
 
   }
@@ -43,7 +48,10 @@ public class GameController : MonoBehaviour {
 	void Update () {
 	}
 
-	public void setGameOver(bool isGameOver){
+	public void subtractHp(bool isGameOver){
+		int hp = this.hp - 7;
+		this.hpText.text = "HP: " + hp;
+		return;
 		this.isGameOver = isGameOver;
 	}
 	
