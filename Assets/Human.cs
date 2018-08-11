@@ -17,6 +17,7 @@ public class Human : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
+		GetComponent<AudioSource>().Play();
 		gameController.GetComponent<GameController>().subtractHp(true);
 	}
 }

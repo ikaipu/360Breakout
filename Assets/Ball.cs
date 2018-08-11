@@ -24,6 +24,7 @@ public class Ball : MonoBehaviour {
 
     void OnCollisionEnter(Collision col){
         Debug.Log("naai nibanda");
+				GetComponent<AudioSource>().Play();
         // rb.isKinematic = false;
         // rb.AddForce(new Vector3(0,50f,-50f));
     }
