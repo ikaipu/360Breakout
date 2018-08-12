@@ -57,7 +57,7 @@ public class GameController : MonoBehaviour {
 		}
 	void Start () {
 		//use this to reset high score
-		// PlayerPrefs.SetInt("highScore",0);
+		PlayerPrefs.SetInt("highScore",0);
 
 		resetGame();
   }

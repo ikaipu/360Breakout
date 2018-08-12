@@ -33,6 +33,7 @@ using UnityEngine;public class Furnitures : MonoBehaviour {
 		if(isGameOver){
 			this.transform.rotation = initialRotation;
 			this.transform.position = initialPosition;
+			rb.useGravity = false;
 		}
 	}
 }
