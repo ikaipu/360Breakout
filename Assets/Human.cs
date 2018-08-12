@@ -17,7 +17,6 @@ public class Human : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
-		Debug.Log("hit");
 		string name = col.collider.gameObject.name ;
 		if(name == "Sphere(Clone)") {
 			gameController.GetComponent<GameController>().subtractHp(10);

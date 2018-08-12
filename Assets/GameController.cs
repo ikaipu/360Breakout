@@ -85,7 +85,6 @@ public class GameController : MonoBehaviour {
 	}
 	public void subtractHp(int damage){
 		int hp = this.hp - damage;
-		Debug.Log("got hit" + hp);
 		this.hp = hp;
 		if(hp <= 0) {
 			this.isGameOver = true;
