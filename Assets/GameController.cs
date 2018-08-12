@@ -97,4 +97,8 @@ public class GameController : MonoBehaviour {
 	public int getTimer(){
 		return (int) timer;
 	}
+
+	public bool getIsGameOver(){
+		return isGameOver;
+	}
 }
