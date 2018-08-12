@@ -17,10 +17,6 @@ public class TestAudioScript : MonoBehaviour {
         _audioSource.volume = _volume;
         _audioSource.Play();
 
-				
-				// PlayerPrefs.SetString("testname","testvalue");
-				// PlayerPrefs.Save();
-				Debug.Log("Arang player pref " + PlayerPrefs.GetInt("highScore"));
     }
 
 }

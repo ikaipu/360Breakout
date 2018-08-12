@@ -11,11 +11,9 @@ public class Ball : MonoBehaviour {
     void Start () {
 
         rb=GetComponent<Rigidbody>();
-        // float x = Random.Range(50f, 500f);
-        // float z = Random.Range(-100f, 100f);
-        float x = Random.Range(50f, 500f);
-        float y = Random.Range(50f, 500f);
-        float z = Random.Range(-100f, 100f);
+        float x = Random.Range(100f, 1000f);
+        float y = Random.Range(100f, 1000f);
+        float z = Random.Range(-1000f, 1000f);
         rb.AddForce(new Vector3(x,y,z));
 
 		
