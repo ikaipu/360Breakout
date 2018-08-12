@@ -10,6 +10,8 @@ public class GameController : MonoBehaviour {
 	public Text hpText;
 
 	public RawImage image;
+    public AudioClip sadBirthday;
+    public AudioClip creepyBirthday;
 
 	 List<GameObject> sphereInstances = new List<GameObject>();
     float timer = 0f;
@@ -47,14 +49,19 @@ public class GameController : MonoBehaviour {
 
 				int currentHighScore = PlayerPrefs.GetInt("highScore");
 
-				if(timer > currentHighScore) {
-
+				if(timer > currentHighScore) 
+                {
+                    transform.GetComponent<AudioSource>().clip = creepyBirthday;
 					image.enabled=true;
 					PlayerPrefs.SetInt("highScore",(int) timer);
 					PlayerPrefs.Save();
 
 					timerText.text = "NEW HIGH SCORE!!!";
-				}
+				} 
+                else {
+                    transform.GetComponent<AudioSource>().clip = sadBirthday;
+                }
+            transform.GetComponent<AudioSource>().Play();
 		}
 	void Start () {
 		//use this to reset high score
