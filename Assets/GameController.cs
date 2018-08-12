@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class GameController : MonoBehaviour {
 
 	// Use this for initialization
@@ -22,7 +21,7 @@ public class GameController : MonoBehaviour {
 		{
 				while (!isGameOver)
 				{
-						if(timer % 5 == 0) {
+						if(timer % 10 == 0) {
 
 							// float x = Sphere.transform.position.x;
 							// float y = Sphere.transform.position.y;
@@ -84,13 +83,18 @@ public class GameController : MonoBehaviour {
 		hpText.text = "HP: " + hp;
 		StartCoroutine(StartCountdown());
 	}
-	public void subtractHp(bool isGameOver){
-		int hp = this.hp - 100;
+	public void subtractHp(int damage){
+		int hp = this.hp - damage;
+		Debug.Log("got hit" + hp);
+		this.hp = hp;
 		if(hp <= 0) {
-			this.isGameOver = isGameOver;
+			this.isGameOver = true;
 		} else {
 			this.hpText.text = "HP: " + hp;
 		}
 	}
 	
+	public int getTimer(){
+		return (int) timer;
+	}
 }

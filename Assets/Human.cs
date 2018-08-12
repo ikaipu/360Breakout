@@ -17,7 +17,14 @@ public class Human : MonoBehaviour {
 	}
 
 	void OnCollisionEnter(Collision col){
+		Debug.Log("hit");
+		string name = col.collider.gameObject.name ;
+		if(name == "Sphere(Clone)") {
+			gameController.GetComponent<GameController>().subtractHp(10);
+		} else {
+
+			gameController.GetComponent<GameController>().subtractHp(30);
+		}
 		GetComponent<AudioSource>().Play();
-		gameController.GetComponent<GameController>().subtractHp(true);
 	}
 }

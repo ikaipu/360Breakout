@@ -13,7 +13,7 @@ public class Shield : MonoBehaviour {
     // Update is called once per frame
     void Update ()
     {
-        var basePosition = GameObject.Find("Main Camera").transform.position + new Vector3(1f, 3f, 3f);
+        var basePosition = GameObject.Find("Main Camera").transform.position + new Vector3(2f, 4f, 3f);
         var transformPosition = InputTracking.GetLocalPosition(XRNode.RightHand) * 15 + basePosition;
         var transformEulerAngles = InputTracking.GetLocalRotation(XRNode.RightHand).eulerAngles;
        
