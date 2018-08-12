@@ -11,7 +11,8 @@ using UnityEngine;public class Furnitures : MonoBehaviour {
 	void Start () {
 		
 		rb = GetComponent<Rigidbody>();
-		initialPosition = new Vector3(transform.position.x,transform.position.y,transform.position.z);
+		initialPosition = transform.position;
+		// initialPosition = new Vector3(transform.position.x,transform.position.y,transform.position.z);
 		initialRotation = transform.rotation;
 		// rb.useGravity = false;
 	}
@@ -23,7 +24,7 @@ using UnityEngine;public class Furnitures : MonoBehaviour {
 
 		bool isGameOver = gameController.GetComponent<GameController>().getIsGameOver();
 
-		if(timer == 3) {
+		if(timer == 60) {
 			// rb.AddForce(new Vector3(500f,500f,-500f));
 			rb.AddForce(Vector3.up);
 			rb.useGravity = false;

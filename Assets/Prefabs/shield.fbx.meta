@@ -9,29 +9,39 @@ ModelImporter:
     100006: e_polySurface2
     100008: pSphere1
     100010: //RootNode
+    100012: pCube16
     400000: a_polySurface4
     400002: b_polySurface21
     400004: c_polySurface23
     400006: e_polySurface2
     400008: pSphere1
     400010: //RootNode
+    400012: pCube16
     2100000: lambert1
     2300000: a_polySurface4
     2300002: b_polySurface21
     2300004: c_polySurface23
     2300006: e_polySurface2
     2300008: pSphere1
+    2300010: pCube16
     3300000: a_polySurface4
     3300002: b_polySurface21
     3300004: c_polySurface23
     3300006: e_polySurface2
     3300008: pSphere1
+    3300010: pCube16
     4300000: pSphere1
     4300002: e_polySurface2
     4300004: a_polySurface4
     4300006: c_polySurface23
     4300008: b_polySurface21
-  externalObjects: {}
+    4300010: pCube16
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: lambert1
+    second: {fileID: 2100000, guid: c66133d01a1814d20b1fd9561bced0dd, type: 2}
   materials:
     importMaterials: 1
     materialName: 2
